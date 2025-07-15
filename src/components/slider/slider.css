@@ -1,0 +1,131 @@
+.slider-section {
+    position: relative;
+}
+
+.slider-wrapper {
+    position: relative;
+    margin-top: 200px;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1294px;
+
+}
+
+.slider-custom {
+    position: absolute;
+    left: -200px;
+}
+
+.slider-frame {
+    color: #fff;
+    min-height: 564px;
+    min-width: 278px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #35C66B;
+    border-radius: 36px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-nav-prev,
+.custom-nav-next {
+    position: absolute;
+    min-width: 64px;
+    height: 64px;
+    border: 1px solid #237249;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.custom-nav-prev {
+    display: none;
+}
+.custom-nav-next {
+    right: 0px;
+}
+
+.custom-nav-next::after {
+    content: '→';
+    color: #237249;
+    font-size: 24px;
+}
+
+
+/* ==== slider card ==== */
+
+.slider-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 296px;
+    gap: 44px;
+}
+
+.slider-icon {
+    max-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slider-icon img {
+    z-index: 1;
+}
+
+.slider-bounce {
+    position: absolute;
+    background: linear-gradient(90deg, #35c66b, #237249);
+    width: 200px;
+    height: 200px;
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.slider-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+}
+
+.slider-title h4 {
+
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    color: #dadada;
+}
+
+.slider-description {
+    font-size: 22px;
+    max-width: 220px;
+    padding: 0 2px;
+}
+
+.slider-price {
+    display: flex;
+    gap: 35px;
+    align-items: end;
+}
+
+.slider-price .price {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.slider-price .capacity {
+    font-size: 20px;
+    font-weight: 400;
+    color: #d9d9d9;
+    padding: 2px 0;
+}

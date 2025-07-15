@@ -1,0 +1,41 @@
+.hero-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 296px;
+}
+
+.hero-icon{
+    max-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.hero-icon img{
+   z-index: 1;
+}
+
+.bounce{
+    position: absolute;
+    background: linear-gradient(90deg, #35c66b, #237249);
+    width: 148px;
+    height: 148px;
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.hero-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-title h4 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    color: #121517;
+}

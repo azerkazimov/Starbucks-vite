@@ -1,0 +1,86 @@
+.hero {
+    color: #fff;
+    margin-top: 168px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 54px;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #fff;
+    text-align: left;
+}
+
+.hero-text {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #d9d9d9;
+    margin-top: 16px;
+}
+
+
+
+.hero-btns {
+    display: flex;
+    gap: 16px;
+}
+
+.counters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 46px;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 120px;
+}
+
+.counter-number {
+    font-size: 62px;
+    display: flex;
+}
+
+.green {
+    color: #35c66b;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.sticker {
+    background: url("../../../../../public/star.png") no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: -60px;
+    right: 10px;
+    width: 280px;
+    height: 280px;
+    display: flex;
+
+    color: #fff;
+    font-size: 62px;
+    font-weight: 400;
+    transform: rotate(-10deg);
+}
+
+.sticker span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -70%);
+}

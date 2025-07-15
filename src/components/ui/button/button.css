@@ -1,0 +1,33 @@
+.btn {
+  background: linear-gradient(90deg, #35c66b, #237249);
+  color: #fff;
+  padding: 20px 44px;
+  min-width: 168.75px;
+  border: none;
+  border-radius: 80px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.btn a{
+    color: #fff;
+
+}
+
+.btn-primary{
+    padding: 20px 80px;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    padding: 20px 24px;
+    border: 1px solid #dadada82;
+    border-radius: 80px;
+    transition: all 0.3 ease-in-out;
+}
+
+
+

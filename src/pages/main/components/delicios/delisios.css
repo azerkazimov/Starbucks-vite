@@ -1,0 +1,88 @@
+.delicious-section{
+    overflow: hidden;
+}
+
+.delicious-section-left-side{
+    text-align: start;
+    
+}
+
+.image-wrapper {
+    position: relative;
+    object-fit: cover;
+}
+
+.image-wrapper img {
+    position: relative;
+    z-index: 3;
+    max-width: 465px;
+    width: 100%;
+}
+
+.image-wrapper::after {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 20px;
+    background-color: #237249;
+    width: 70%;
+    height: 100%;
+    z-index: 2;
+}
+
+.delicion-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    z-index: 0;
+}
+
+.delicious-content {
+    display: flex;
+    flex-direction: column;
+    gap: 63px;
+    max-width: 467px;
+
+
+    h2 {
+        color: #fff;
+        font-size: 86px;
+        font-weight: 800;
+    }
+
+    p {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.6;
+        text-align: start;
+        padding: 0 20px;
+    }
+}
+
+.cooking-img {
+    object-fit: cover;
+
+    .coocking-image-wrapper{
+        position: relative;
+        max-width: 480px;
+    }
+
+    img {
+        width: 100%;
+
+    }
+
+    .play-btn{
+        position: absolute;
+        display: flex;
+        width: 70%;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
