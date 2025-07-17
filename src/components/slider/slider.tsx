@@ -8,12 +8,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-
-import cupBrown from "./cup-brown.png";
-import cupKhaki from "./cup-khaki.png";
-import cupGreen from "./cup-green.png";
-
 import SliderCard from "./slider-card";
+import { menu } from "@/data/menu";
 
 export default function Slider() {
   return (
@@ -31,50 +27,15 @@ export default function Slider() {
           loop={true}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           className="slider-custom"
-          
         >
-          <SwiperSlide className="slider-frame">
-            <SliderCard
-              image={cupBrown}
-              title={"Cappucino"}
-              description={"Our cafe will serve you quickly"}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="slider-frame">
-            <SliderCard
-              image={cupKhaki}
-              title={"Latte"}
-              description={"Our cafe will serve you quickly"}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="slider-frame">
-            <SliderCard
-              image={cupGreen}
-              title={"Lungo"}
-              description={"Our cafe will serve you quickly"}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="slider-frame">
-            <SliderCard
-              image={cupBrown}
-              title={"Cappucino"}
-              description={"Our cafe will serve you quickly"}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="slider-frame">
-            <SliderCard
-              image={cupKhaki}
-              title={"Latte"}
-              description={"Our cafe will serve you quickly"}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="slider-frame">
-            <SliderCard
-              image={cupGreen}
-              title={"Lungo"}
-              description={"Our cafe will serve you quickly"}
-            />
-          </SwiperSlide>
+          {menu.map((coffee) => (
+            <SwiperSlide className="slider-frame" key={coffee.name}>
+              <SliderCard
+                coffee={coffee}
+              />
+            </SwiperSlide>
+          ))}
+          
         </Swiper>
         <div className="custom-nav-next"></div>
       </div>

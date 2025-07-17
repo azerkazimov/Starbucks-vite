@@ -1,12 +1,13 @@
 import type { AuthUser } from "@/types/middleware";
 
-import { useStore } from "@/store/use-store";
+import { useSidebar } from "@/store/use-sidebar";
 import { ShoppingCart } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import "./navbar.css";
 import Sidebar from "@/components/sidebar/sidebar";
+import "./navbar.css";
+import { useProducts } from "@/store/use-products";
 
 interface NavbarProps {
   isAuthenticated: boolean;
@@ -21,10 +22,8 @@ export default function Navbar({
 }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const { openSidebar, isSidebarOpen } = useStore();
-
-  console.log(isSidebarOpen);
-  
+  const { openSidebar, isSidebarOpen } = useSidebar();
+  const { products } = useProducts();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -83,11 +82,14 @@ export default function Navbar({
               aria-label="Open cart"
             >
               <ShoppingCart />
-              <span className="basket-count">3</span>
+              {products.length > 0 ? (
+                <span className="basket-count">{products.length}</span>
+              ) : (
+                <></>
+              )}
             </button>
 
-            {isSidebarOpen && <Sidebar/>}
-
+            {isSidebarOpen && <Sidebar />}
 
             {isAuthenticated ? (
               <div className="avatar-container">

@@ -1,31 +1,28 @@
+import type { Menu } from "@/types/menu";
 import Button from "../ui/button/button";
 import "./slider.css";
+import { useProducts } from "@/store/use-products";
 
-interface SliderCardProps {
-  image: string;
-  title: string;
-  description: string;
-}
-
-export default function SliderCard({ image, title, description }: SliderCardProps) {
+export default function SliderCard({ coffee }: { coffee: Menu }) {
+  const {addProduct}=useProducts()
   return (
     <div className="slider-item">
       <div className="slider-icon">
         <div className="slider-bounce" />
-        <img src={image} alt="icon" />
+        <img src={coffee.img} alt="icon" />
       </div>
       <div className="slider-heading">
         <div className="slider-title">
-          <h4>{title}</h4>
+          <h4>{coffee.name}</h4>
         </div>
         <div className="slider-description">
-          <span>{description}</span>
+          <span>{coffee.description}</span>
         </div>
         <div className="slider-price">
-          <span className="price">7,45$</span>
-          <span className="capacity">330ml</span>
+          <span className="price">{coffee.price}</span>
+          <span className="capacity">{coffee.capacity}ml</span>
         </div>
-        <Button >Buy now</Button>
+        <Button onClick={() => addProduct(coffee)}>Buy now</Button>
       </div>
     </div>
   );
