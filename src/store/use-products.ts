@@ -7,6 +7,9 @@ interface ProductsState {
   removeProduct: (id: number) => void;
   cleanProducts: () => void;
   getTotalCount: () => number;
+  increaseQuantity: (id: number) => void;
+  decreaseQuantity: (id: number) => void;
+  
 }
 
 export const useProducts = create<ProductsState>((set, get) => ({
