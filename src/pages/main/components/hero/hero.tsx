@@ -21,12 +21,12 @@ export default function Hero() {
 
               <div className="hero-btns">
                 <Button >
-                  <Link href="/users">
+                  <Link to="/users">
                     Select a coffee
                   </Link>
                 </Button>
                 <Button className='btn-secondary'>
-                  <Link href="/about">
+                  <Link to="/about">
                     More
                   </Link>
                 </Button>

@@ -1,7 +1,12 @@
+import type { AuthUser } from "@/types/middleware";
+
+import { useStore } from "@/store/use-store";
+import { ShoppingCart } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import "./navbar.css";
-import type { AuthUser } from "@/types/middleware";
+import Sidebar from "@/components/sidebar/sidebar";
 
 interface NavbarProps {
   isAuthenticated: boolean;
@@ -14,9 +19,12 @@ export default function Navbar({
   user,
   onLogout,
 }: NavbarProps) {
-
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const { openSidebar, isSidebarOpen } = useStore();
+
+  console.log(isSidebarOpen);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +36,6 @@ export default function Navbar({
   }, []);
 
   useEffect(() => {
-
     const handleClickOutside = (event: MouseEvent) => {
       if (!(event.target as Element).closest(".avatar-container")) {
         setDropdownOpen(false);
@@ -69,32 +76,46 @@ export default function Navbar({
               <Link to="/todo-list">Todo</Link>
             </li>
           </ul>
-          {isAuthenticated ? (
-            <div className="avatar-container">
-              <div className="avatar" onClick={toggleDropdown}></div>
-              <span>{user?.name}</span>
-              {dropdownOpen && (
-                <div className="dropdown-menu">
-                  <Link to="/dashboard" className="dropdown-item">
-                    Dashboard
-                  </Link>
+          <div className="navbar-actions">
+            <button
+              className="basket-icon"
+              onClick={openSidebar}
+              aria-label="Open cart"
+            >
+              <ShoppingCart />
+              <span className="basket-count">3</span>
+            </button>
 
-                  <button className="dropdown-item" onClick={onLogout}>
-                    Logout
-                  </button>
-                </div>
-              )}
-            </div>
-          ) : (
-            <div className="last">
-              <span className="nav-item ">
-                <Link to="/auth/login">Login</Link>
-              </span>
-              <span className="nav-item ">
-                <Link to="/auth/register">Register</Link>
-              </span>
-            </div>
-          )}
+            {isSidebarOpen && <Sidebar/>}
+
+
+            {isAuthenticated ? (
+              <div className="avatar-container">
+                <div className="avatar" onClick={toggleDropdown}></div>
+                <span>{user?.name}</span>
+                {dropdownOpen && (
+                  <div className="dropdown-menu">
+                    <Link to="/dashboard" className="dropdown-item">
+                      Dashboard
+                    </Link>
+
+                    <button className="dropdown-item" onClick={onLogout}>
+                      Logout
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="last">
+                <span className="nav-item ">
+                  <Link to="/auth/login">Login</Link>
+                </span>
+                <span className="nav-item ">
+                  <Link to="/auth/register">Register</Link>
+                </span>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </nav>

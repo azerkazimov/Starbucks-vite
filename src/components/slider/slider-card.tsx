@@ -1,3 +1,4 @@
+import Button from "../ui/button/button";
 import "./slider.css";
 
 interface SliderCardProps {
@@ -24,6 +25,7 @@ export default function SliderCard({ image, title, description }: SliderCardProp
           <span className="price">7,45$</span>
           <span className="capacity">330ml</span>
         </div>
+        <Button >Buy now</Button>
       </div>
     </div>
   );

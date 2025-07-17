@@ -30,8 +30,8 @@ export default function Slider() {
           }}
           loop={true}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          scrollbar={{ draggable: true }}
           className="slider-custom"
+          
         >
           <SwiperSlide className="slider-frame">
             <SliderCard
