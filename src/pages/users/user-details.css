@@ -1,0 +1,179 @@
+.user-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* User Wrapper */
+.user-wrapper {
+  background-color: #353a3e;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  border: 2px solid #35c66b;
+}
+
+/* Header */
+.user-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  color: #35c66b;
+}
+
+.back-to-prev {
+  background: none;
+  border: 1px solid #35c66b;
+  color: #35c66b;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+.back-to-prev:hover {
+  background-color: #237249;
+  color: #fff;
+}
+
+/* Profile section */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.user-avatar {
+  background-color: #237249;
+  padding: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-main-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-full-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e2e2e2;
+}
+
+.user-username {
+  color: #a0a0a0;
+}
+
+/* Sections */
+.info-section {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #35c66b;
+}
+
+/* Info Grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.info-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.info-icon {
+  color: #35c66b;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.info-value {
+  font-size: 16px;
+  color: #fff;
+}
+
+.link {
+  color: #35c66b;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Company Info */
+.company-info {
+  background-color: #20262a;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.company-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #35c66b;
+}
+
+.company-bs {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.company-phrase {
+  font-style: italic;
+  margin-top: 12px;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-details-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

@@ -6,6 +6,9 @@ import Register from "@/pages/auth/register/register";
 import Dashboard from "@/pages/dashboard/dashboard";
 import Main from "@/pages/main/main";
 import PATH from "./constant";
+import UsersApp from "@/pages/users/users-app";
+import About from "@/pages/about/about";
+import TodoApp from "@/pages/todo-list/todo-app";
 
 export const Routes = [
   {
@@ -15,6 +18,18 @@ export const Routes = [
       {
         index: true,
         element: <Main />,
+      },
+      {
+        path: "/users",
+        element: <UsersApp />,
+      },
+      {
+        path: "/about",
+        element: <About user="John Doe" />,
+      },
+      {
+        path: "/todo-list",
+        element: <TodoApp />,
       },
     ],
   },

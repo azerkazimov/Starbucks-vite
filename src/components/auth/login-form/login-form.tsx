@@ -20,7 +20,6 @@ export default function LoginForm() {
   } = useForm<LoginFormData>();
 
   const onSubmit = (formData: LoginFormData) => {
-    console.log(formData);
 
     const storedData = localStorage.getItem("userdata");
 

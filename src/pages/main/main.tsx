@@ -1,4 +1,5 @@
 
+import Contact from "./components/contact/contact";
 import Delicios from "./components/delicios/delicios";
 import Events from "./components/events/event";
 import HeroFrame from "./components/hero-frame/hero-frame";
@@ -8,12 +9,13 @@ import "./main.css";
 
 export default function Main() {
   return (
-    <div className="main">
+    <div className="main"> 
       <Hero />
       <HeroFrame />
       <Delicios />
       <Products />
       <Events />
+      <Contact />
     </div>
   );
 }

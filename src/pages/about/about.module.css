@@ -1,0 +1,20 @@
+.about-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 44px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.higlight{
+    color: #fefe00;
+    font-weight: 700;
+}
+
+.container{
+    max-width: 1100px;
+    background: #626262;
+    margin: 0 auto;
+}

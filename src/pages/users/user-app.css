@@ -1,0 +1,243 @@
+.app-container {
+    margin-top: 100px;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background-color: #121517;
+}
+
+.main-card {
+    background: rgba(35, 114, 73, 0.15);
+    border: 1px solid rgba(53, 198, 107, 0.15);
+    backdrop-filter: blur(24px);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 25px 60px rgba(53, 198, 107, 0.1);
+}
+
+/* Header Section */
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header-left {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e2e2e2;
+}
+
+/* Icon Wrapper */
+.icon-wrapper {
+    width: max-content;
+    padding: 16px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #35c66b, #237249);
+    box-shadow: 0 8px 25px rgba(35, 198, 107, 0.3);
+}
+
+/* Add Button */
+.btn-add {
+    background: none;
+    color: #35c66b;
+    border: 2px solid #35c66b;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(53, 198, 107, 0.3);
+}
+
+.add-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(35, 198, 107, 0.4);
+}
+
+.add-button.active {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.users-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+/* User Card */
+.user-card {
+    background: #131712bf;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(53, 198, 107, 0.08);
+    border: 1px solid rgba(53, 198, 107, 0.2);
+    transition: all 0.3s ease;
+    color: #f0fdf4;
+}
+
+.user-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(53, 198, 107, 0.15);
+}
+
+.user-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.action-button {
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #35c66b;
+    background: none;
+}
+
+/* Form  */
+.form-card {
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+    border: 2px solid #35c66b;
+    margin: 24px 0;
+    color: #e2e2e2;
+}
+
+.form-title {
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    gap: 34px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-group .label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input-group .input {
+    padding: 16px;
+    border: 1px solid #34d399;
+    border-radius: 8px;
+    background: none;
+    color: #e2e2e2;
+}
+
+.input-group .input:focus {
+    outline: none;
+    box-shadow: 0 4px 12px rgba(53, 198, 107, 0.2);
+
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+}
+
+.submit-button {
+    padding: 12px;
+    min-width: 180px;
+    border: 1px solid #35c66b;
+    border-radius: 12px;
+    background: none;
+    color: #9ef1d5;
+    font-size: 16px;
+    font-weight: 500;;
+}
+
+.cancel-button {
+    padding: 12px;
+    min-width: 180px;
+    border: 1px solid #35c66b;
+    border-radius: 12px;
+    background: none;
+    color: #dc2626;
+    font-size: 16px;
+    font-weight: 500;;
+}
+
+
+/* Typography */
+.user-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #d1fae5;
+}
+
+.user-detail {
+    color: #a7f3d0;
+}
+
+.user-detail strong {
+    color: #6ee7b7;
+}
+
+.website-link {
+    color: #34d399;
+}
+
+.website-link:hover {
+    color: #10b981;
+}
+
+/* Buttons inside Card */
+.edit-button {
+    color: #34d399;
+}
+
+.edit-button:hover {
+    background: rgba(52, 211, 153, 0.1);
+}
+
+.delete-button {
+    color: #f87171;
+}
+
+.delete-button:hover {
+    background: rgba(248, 113, 113, 0.1);
+}
+
+/* Empty State */
+.empty-text {
+    color: #9ca3af;
+}
+
+/* Refresh Button */
+.refresh-button {
+    background: linear-gradient(135deg, #35c66b, #237249);
+    box-shadow: 0 4px 15px rgba(53, 198, 107, 0.2);
+}
+
+.refresh-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(35, 198, 107, 0.3);
+}
