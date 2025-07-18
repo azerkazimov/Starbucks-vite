@@ -9,6 +9,7 @@ import PATH from "./constant";
 import UsersApp from "@/pages/users/users-app";
 import About from "@/pages/about/about";
 import TodoApp from "@/pages/todo-list/todo-app";
+import UserDetails from "@/pages/users/user-details";
 
 export const Routes = [
   {
@@ -22,6 +23,10 @@ export const Routes = [
       {
         path: "/users",
         element: <UsersApp />,
+      },
+      {
+        path: "/users/:id",
+        element: <UserDetails />,
       },
       {
         path: "/about",
